@@ -26,7 +26,7 @@ const Events = () => {
           
         }
     return (
-        <div>
+        <div className={styles.event}>
             <form className={styles.form} >
                 <label htmlFor="email" className={styles.label}>Title:</label>
                 <input type="text" id="email" name="Title" placeholder="Enter your Title" required className={styles.input}

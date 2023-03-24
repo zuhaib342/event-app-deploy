@@ -4,7 +4,10 @@ import styles from "../styles/Home.module.css";
 import { auth } from "../firebase/Firebase";
 import {useRouter} from "next/router";
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import { useEffect } from "react";
+import { link } from "fs/promises";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -33,12 +36,16 @@ const Signup = () => {
       setLoader(false);
     }
   };
+  const toLogin = ()=>{
+  
+  }
 
   return (
     <div className={styles.container}>
+      <ToastContainer/>
       <div className={styles.card}>
         <h2>Sign Up</h2>
-        <button  > Already Signed Up ? Click here</button>
+        <button  onClick={toLogin}> Already Signed Up ? Click here</button>
         <input
           type="text"
           placeholder="Name"

@@ -6,7 +6,10 @@ import styles from "../styles/Home.module.css";
 import { auth } from "../firebase/Firebase";
 import Router from "next/router";
 import { useRouter } from 'next/router'
+
 import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 const login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -32,6 +35,7 @@ const login = () => {
     };
     return (
         <div className={styles.container}>
+            <ToastContainer/>
             <div className={styles.card}>
             <h1>
                 Login form

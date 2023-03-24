@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.navbar__brand}>
         <Link href="/" className={styles.li}>
-          Event Planner App 
+          Event Planner 
         </Link>
       </div>
       <div className={styles.navbar__menu}>

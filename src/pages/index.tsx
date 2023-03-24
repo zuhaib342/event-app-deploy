@@ -9,20 +9,25 @@ import LandingPage from './components/Slider'
 import Events from './Events'
 import getEvents from './getEvents'
 import Eventing from './getEvents'
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <>
-     <Navbar/>
-    {/* <getEvents/> */}
-    <Eventing />
+    <div className={styles.index}>
+      <Navbar />
+      <ToastContainer />
+      {/* <getEvents/> */}
+      <Eventing />
 
 
-     {/* <LandingPage/> */}
-  
+      {/* <LandingPage/> */}
+    </div>
 
-    </>
+
+
+
   )
 }
