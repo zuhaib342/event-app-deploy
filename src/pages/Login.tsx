@@ -1,7 +1,6 @@
-import { useState } from "react";
+
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "../firebase/Firebase";
 
-// import "../styles/Home.module.css"
 import styles from "../styles/Home.module.css";
 import { auth } from "../firebase/Firebase";
 import Router from "next/router";
@@ -10,6 +9,7 @@ import { useRouter } from 'next/router'
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { useState } from "react";
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
