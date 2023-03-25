@@ -10,7 +10,7 @@ import { useRouter } from 'next/router'
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-const login = () => {
+const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loader, setLoader] = useState(false);
@@ -54,4 +54,4 @@ const login = () => {
         </div>
     )
 };
-export default login 
+export default Login 
