@@ -2,7 +2,6 @@ import { doc, getDocs, collection } from "firebase/firestore";
 import { db } from "@/firebase/Firebase";
 import { useEffect, useState } from "react";
 import { eventType } from "@/types/eventType";
-import { background } from "@chakra-ui/react";
 import { ClassNames } from "@emotion/react";
 const Eventing = () => {
 
