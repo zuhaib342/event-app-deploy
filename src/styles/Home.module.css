@@ -1,10 +1,162 @@
 .index{
+  background-image: linear-gradient(to right, #708F96,#AA895F ) !important;
+
+}
+.bg{
+  background-image: linear-gradient(to right, #708F96,#AA895F );
+
+}.index{
   background-image: linear-gradient(to right, #708F96,#AA895F );
 
 }
 .bg{
   background-image: linear-gradient(to right, #708F96,#AA895F );
 
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to right,#AA895F, #708F96 );
+width: 100%;
+}
+
+.card {
+  background-color: #708F96;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 16px;
+}
+
+.card input {
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #AA895F;  color: #fff;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #364649;
+}
+
+.card a {
+  margin-top: 16px;
+  text-decoration: none;
+  color: #2196f3;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightyellow;
+}
+
+.ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.li {
+  font-size: 25px;
+  width: 8em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  position: relative;
+  transition: 0.5s;
+  margin: 0.8em;
+}
+
+.li::before,
+.li::after {
+  content: '';
+  position: absolute;
+  width: 0.6em;
+  height: 0.6em;
+  background-color: gainsboro;
+  border-radius: 50%;
+  transition: 0.5s cubic-bezier(0.5, -0.5, 0.25, 1.5);
+  top: calc(50% - 0.6em / 2);
+}
+
+.li::before {left: 0; z-index: -1;}
+.li::after {right: 0; z-index: -2;}
+
+.li:hover {
+  color: white;
+}
+
+.li:hover::before,
+.li:hover::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  background-color: dodgerblue;
+}
+
+.li:hover::before {
+  top: 0;
+}
+
+.li:hover::after {
+  right: -0.4em;
+  filter: brightness(0.8);
+}
+/* Small screens (mobile) */
+@media only screen and (max-width: 600px) {
+  .container {
+    height: auto; /* remove fixed height */
+  }
+  .card {
+    width: 90%; /* make the card narrower */
+  }
+}
+
+/* Medium screens (tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    height: auto; /* remove fixed height */
+  }
+  .card {
+    width: 60%; /* make the card narrower */
+  }
+}
+
+/* Large screens (desktops) */
+@media only screen and (min-width: 1025px) {
+  .container {
+    height: 100vh; /* restore fixed height */
+  }
+  .card {
+    width: 40%; /* make the card narrower */
+  }
 }
 .container {
   display: flex;

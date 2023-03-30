@@ -15,13 +15,13 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [loader, setLoader] = useState(false);
   const router=useRouter()
-  const isLoggedIn = true;
-  useEffect(() => {
-    // Redirect to login page if user is already logged in
-    if (isLoggedIn) {
-      router.push('/login');
-    }
-  }, [isLoggedIn, router]);
+  // const isLoggedIn = true;
+  // useEffect(() => {
+  //   // Redirect to login page if user is already logged in
+  //   if (isLoggedIn) {
+  //     router.push('/Login');
+  //   }
+  // }, [isLoggedIn, router]);
   const onSubmitHandler = async () => {
     try {
       setLoader(true);
@@ -37,7 +37,7 @@ const Signup = () => {
     }
   };
   const toLogin = ()=>{
-  
+  router.push("/Login")
   }
 
   return (

@@ -21,6 +21,11 @@ const Navbar = () => {
           Menu
         </button>
         <ul className={`${styles.navbar__menuList} ${isMenuOpen && styles.navbar__menuListOpen}`}>
+        <li>
+            <Link href="/myEvents" className={styles.li}>
+            My Events
+            </Link>
+          </li>
           <li>
             <Link href="/Events" className={styles.li}>
             Add Event
