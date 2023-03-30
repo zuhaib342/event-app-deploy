@@ -35,23 +35,23 @@ const Login = () => {
     };
     return (
         <div className={styles.container}>
-            <ToastContainer/>
+            <ToastContainer />
             <div className={styles.card}>
-            <h1>
-                Login form
-            </h1>
+                <h1>
+                    Login form
+                </h1>
 
 
-            <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Enter your email" />
-            <br />
-            <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Enter your password" />
-            <br />
-            {loader ? <button >Loading...</button> :
-                <button onClick={onSubmitHandler} >Login</button>}
+                <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Enter your email" />
+                <br />
+                <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Enter your password" />
+                <br />
+                {loader ? <button >Loading...</button> :
+                    <button onClick={onSubmitHandler} >Login</button>}
             </div>
-       
+
 
         </div>
     )
 };
-export default Login 
+export default Login ;
