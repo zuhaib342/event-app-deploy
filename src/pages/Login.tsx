@@ -25,7 +25,7 @@ const Login = () => {
             toast.success("Successfully login!");
             router.push("/");
         } catch (e) {
-            toast.error(e.message);
+            toast.error((e as Error).message);
             console.log("====================================");
             console.log(e);
             console.log("====================================");

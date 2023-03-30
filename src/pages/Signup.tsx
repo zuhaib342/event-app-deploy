@@ -31,7 +31,7 @@ const Signup = () => {
       toast.success("Successfully signed up!");
       router.push("/Login");
     } catch (e) {
-      toast.error(e.message);
+      toast.error((e as Error).message);
     } finally {
       setLoader(false);
     }
