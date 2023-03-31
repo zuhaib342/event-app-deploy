@@ -12,18 +12,40 @@ import Eventing from './getEvents'
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
+
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className={Styles.index}>
-      <Navbar />
-      <ToastContainer />
-      {/* <getEvents/> */}
-      <Eventing />
+    <div style={{  backgroundImage: 'linear-gradient(to right,#2fbdff, #ff7582)' }} >
+     <Navbar />
+  <ToastContainer />
+  
 
-
-      {/* <LandingPage/> */}
+  <Image
+    src="/image/bworksentertainment1217.jpg"
+    alt="Cartoon graduates jump with happiness"
+    quality={100}
+    layout="fill"
+  />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <Eventing />
     </div>
 
 
