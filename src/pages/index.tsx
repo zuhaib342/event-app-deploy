@@ -27,8 +27,11 @@ export default function Home() {
     src="/image/bworksentertainment1217.jpg"
     alt="Cartoon graduates jump with happiness"
     quality={100}
-    layout="fill"
-  />
+    width={600}
+    height={400}
+    layout="responsive"
+    />
+  {/* <br />
   <br />
   <br />
   <br />
@@ -43,8 +46,7 @@ export default function Home() {
   <br />
   <br />
   <br />
-  <br />
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> */}
   <Eventing />
     </div>
 
