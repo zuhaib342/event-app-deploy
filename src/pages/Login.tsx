@@ -5,11 +5,12 @@ import styles from "../styles/Home.module.css";
 import { auth } from "../firebase/Firebase";
 import Router from "next/router";
 import { useRouter } from 'next/router'
-
+import Navbar from "./components/Navbar";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { useState } from "react";
+
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -33,14 +34,20 @@ const Login = () => {
             setLoader(false);
         }
     };
+    const toSignup = ()=>{
+        router.push ("Signup")
+        }
     return (
-        <div className={styles.container}>
+<div>
+    <Navbar/>
+    <div className={styles.container}>
             <ToastContainer />
             <div className={styles.card}>
                 <h1>
                     Login form
                 </h1>
-
+              
+      <button  onClick={toSignup}> Don't have an Account? Click here</button>
 
                 <input onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Enter your email" />
                 <br />
@@ -52,6 +59,9 @@ const Login = () => {
 
 
         </div>
+</div>
+
+       
     )
 };
 export default Login ;

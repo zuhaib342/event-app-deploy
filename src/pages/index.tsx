@@ -4,8 +4,6 @@ import { Inter } from 'next/font/google'
 import Styles from '../styles/Home.module.css'
 import Signup from '../pages/Signup'
 import Navbar from './components/Navbar'
-import Banner from './components/Slider'
-import LandingPage from './components/Slider'
 import Events from './Events'
 import getEvents from './getEvents'
 import Eventing from './getEvents'
@@ -31,22 +29,7 @@ export default function Home() {
     height={400}
     layout="responsive"
     />
-  {/* <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> */}
+ 
   <Eventing />
     </div>
 

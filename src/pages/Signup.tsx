@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "../firebase/Firebase";
+import { getAuth, createUserWithEmailAndPassword } from "../firebase/Firebase"
 import styles from "../styles/Home.module.css";
-import { auth } from "../firebase/Firebase";
+import { auth } from "../firebase/Firebase"
 import {useRouter} from "next/router";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { useEffect } from "react";
 import { link } from "fs/promises";
+import Navbar from "./components/Navbar";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -15,11 +16,11 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [loader, setLoader] = useState(false);
   const router=useRouter()
-  // const isLoggedIn = true;
+  const isLoggedIn = true;
   // useEffect(() => {
   //   // Redirect to login page if user is already logged in
   //   if (isLoggedIn) {
-  //     router.push('/Login');
+  //     routerisLoggedIn.push('/login');
   //   }
   // }, [isLoggedIn, router]);
   const onSubmitHandler = async () => {
@@ -31,43 +32,46 @@ const Signup = () => {
       toast.success("Successfully signed up!");
       router.push("/Login");
     } catch (e) {
-      toast.error((e as Error).message);
+      toast.error(e.message);
     } finally {
       setLoader(false);
     }
   };
   const toLogin = ()=>{
-  router.push("/Login")
+  router.push ("Login")
   }
 
   return (
-    <div className={styles.container}>
-      <ToastContainer/>
-      <div className={styles.card}>
-        <h2>Sign Up</h2>
-        <button  onClick={toLogin}> Already Signed Up ? Click here</button>
-        <input
-          type="text"
-          placeholder="Name"
-          onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        {loader ? (
-          <button disabled>Loading...</button>
-        ) : (
-          <button onClick={onSubmitHandler}>Sign Up</button>
-        )}
-      </div>
+    <div>
+      <Navbar/>
+       <div className={styles.container}>
+    <ToastContainer/>
+    <div className={styles.card}>
+      <h2>Sign Up</h2>
+      <button  onClick={toLogin}> Already Signed Up ? Click here</button>
+      <input
+        type="text"
+        placeholder="Name"
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Email"
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      {loader ? (
+        <button disabled>Loading...</button>
+      ) : (
+        <button onClick={onSubmitHandler}>Sign Up</button>
+      )}
     </div>
+  </div></div>
+   
   );
 };
 

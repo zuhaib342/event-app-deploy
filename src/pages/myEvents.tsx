@@ -3,6 +3,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/Firebase";
 import { eventType } from "@/types/eventType";
 import styles from "../styles/Home.module.css";
+import Navbar from "./components/Navbar";
 
 const MyEvents = ({ }) => {
   // const [joinedEvents, setJoinedEvents] = useState<eventType[]>([]);
@@ -35,7 +36,9 @@ const MyEvents = ({ }) => {
   // }, [userId]);
 
   return (
-    <div className={styles.container}>
+    <div>
+      <Navbar/>
+      <div className={styles.container}>
       <div className={styles.card}>
       <h1>My Joined Events</h1>
       {/* {joinedEvents.length === 0 ? ( */}
@@ -54,6 +57,7 @@ const MyEvents = ({ }) => {
         </div>
       )} */}
       </div>
+    </div>
     </div>
   );
 };
